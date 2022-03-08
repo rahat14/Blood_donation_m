@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.SignUpFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:background="@drawable/ic_logo"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blood_donation"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/gray_dark"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="48dp"
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic__username_icon"
+                android:textSize="16sp"
+                android:inputType="textPersonName"
+                android:textColor="@color/gray_light"
+                android:drawablePadding="8dp"
+                android:text="@string/dummy123"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="8dp"
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_outline_email_24"
+                android:textSize="16sp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/gray_light"
+                android:drawablePadding="8dp"
+                android:text="@string/dummy123_gmail_com"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="8dp"
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            app:endIconMode="password_toggle"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_password_icon"
+                android:textSize="16sp"
+                android:inputType="textPassword"
+                android:textColor="@color/gray_light"
+                android:drawablePadding="8dp"
+                android:text="@string/ph"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginLeft="48dp"
+            android:backgroundTint="@color/pink_bg"
+            android:text="@string/sign_up"
+            android:textSize="16sp"
+            app:cornerRadius="8dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:gravity="bottom|center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/don_t_have_an_account"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:textColor="@color/gray_light"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:textColor="@color/pink_bg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/now"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:textColor="@color/gray_light"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

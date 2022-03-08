@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.AccountSetUpFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/create_your_account"
+                android:textColor="@color/gray_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/ic_baseline_attach_file_24"
+            android:rotation="45"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/pink_bg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="@string/dummy123"
+                android:textColor="@color/gray_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/dummy123_gmail_com"
+                android:textColor="@color/gray_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="48dp"
+                android:id="@+id/outlinedTextField"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_local_phone_24"
+                    android:textSize="16sp"
+                    android:inputType="phone"
+                    android:textColor="@color/gray_light"
+                    android:drawablePadding="8dp"
+                    android:text="@string/ph"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blood_group"
+                    android:layout_marginTop="2dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:textStyle="normal"
+                    android:textColor="@color/gray_dark"/>
+                <Spinner
+                    android:layout_height="48dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:prompt="@string/bld_grp"
+                    android:entries="@array/blood_group"
+                    android:background="@drawable/pink_border_bg"
+                    >
+
+                </Spinner>
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="8dp"
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/address"
+                android:backgroundTint="@color/gray_light"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_outline_location_on_24"
+                    android:textSize="16sp"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:textColor="@color/gray_light"
+                    android:drawablePadding="8dp"
+                    android:text="@string/ph"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/do_you_want_to_donate_your_blood"
+                android:checked="false"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                app:buttonTint="@color/pink_bg"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/pink_bg"
+        android:text="@string/ok_done"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        android:layout_gravity="bottom|end"
+        android:textStyle="bold"/>
+
+</FrameLayout>

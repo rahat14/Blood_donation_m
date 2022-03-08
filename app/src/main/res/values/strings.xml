@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Blood_donation_milon</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="blood_donation">Blood Donation</string>
+    <string name="you_can_donate_for_ones_in_need_and_request_blood_if_you_need">You can donate for ones in need and request blood if you need.</string>
+    <string name="email">Email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or">OR</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="dummy123_gmail_com">dummy123@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="ph">01234567890</string>
+    <string name="don_t_have_an_account">Already have an account?</string>
+    <string name="now">now</string>
+    <string name="dummy123">Dummy123</string>
+    <string name="bld_grp">Select a blood group</string>
+    <string name="do_you_want_to_donate_your_blood">Do you want to Donate your blood</string>
+    <string name="ok_done">OK, Done</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="phone">Phone</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="address">Address</string>
+    <string-array name="blood_group">
+        <item>A+</item>
+        <item>B+</item>
+        <item>O+</item>
+        <item>AB+</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>O-</item>
+        <item>AB-</item>
+    </string-array>
+</resources>
