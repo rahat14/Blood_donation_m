@@ -124,7 +124,7 @@
                     android:minLines="2"
                     android:textColor="@color/gray_light"
                     android:drawablePadding="8dp"
-                    android:text="@string/ph"
+                    android:text="@string/location"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>

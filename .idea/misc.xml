@@ -6,10 +6,13 @@
         <entry key="app/src/main/res/drawable/btn_background.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/ic__username_icon.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/ic_baseline_attach_file_24.xml" value="0.243" />
+        <entry key="app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.293" />
         <entry key="app/src/main/res/drawable/ic_password_icon.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/pink_border_bg.xml" value="0.243" />
+        <entry key="app/src/main/res/drawable/round_btn_bg.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/round_shape.xml" value="0.243" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/fragment_account_set_up.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.28489583333333335" />
