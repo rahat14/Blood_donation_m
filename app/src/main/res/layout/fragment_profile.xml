@@ -29,8 +29,9 @@
            android:src="@color/teal_200"
           />
 
-       <TextView
+       <EditText
            android:id="@+id/pro_name"
+           android:backgroundTint="@color/white"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_below="@+id/profile_image"

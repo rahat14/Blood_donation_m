@@ -25,6 +25,11 @@
     <string name="button">button</string>
     <string name="a">A+</string>
     <string name="location">Kandirpaar, Cumilla</string>
+    <string name="name">Name</string>
+    <string name="location_l">Location</string>
+    <string name="num_5">5</string>
+    <string name="min_ago">min ago</string>
+    <string name="chat_now">Chat Now</string>
     <string-array name="blood_group">
         <item>A+</item>
         <item>B+</item>
