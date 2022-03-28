@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic__username_icon_pink.xml" value="0.243" />
+        <entry key="app/src/main/res/drawable-v24/pink_bg_shape.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/btn_background.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/ic__username_icon.xml" value="0.243" />
+        <entry key="app/src/main/res/drawable/ic__username_icon_pink.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/ic_baseline_attach_file_24.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.293" />
@@ -20,6 +23,7 @@
         <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/row_for_donation_post.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/layout/row_for_user_list.xml" value="0.28489583333333335" />
       </map>
     </option>
   </component>
