@@ -37,6 +37,7 @@
             app:civ_border_width="2dp"
             app:civ_border_color="@color/pink_bg"/>
             <TextView
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -46,6 +47,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
+                android:id="@+id/mail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -56,7 +58,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="48dp"
-                android:id="@+id/outlinedTextField"
+                android:id="@+id/ph"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
@@ -94,6 +96,7 @@
                     android:textStyle="normal"
                     android:textColor="@color/gray_dark"/>
                 <Spinner
+                    android:id="@+id/blood_grp"
                     android:layout_height="48dp"
                     android:layout_width="match_parent"
                     android:layout_marginStart="16dp"
@@ -116,6 +119,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_outline_location_on_24"
@@ -130,6 +134,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/do_you_want_to_donate_your_blood"
@@ -142,6 +147,7 @@
     </ScrollView>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitBtn"
         android:layout_width="120dp"
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"

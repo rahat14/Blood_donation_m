@@ -30,6 +30,34 @@ class AccountSetUpFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        loadBloodGroup()
+        binding.mail.text = arguments?.getString("email").toString()
+        binding.name.text = arguments?.getString("username").toString()
+
+        binding.submitBtn.setOnClickListener {
+            val phone = binding.ph.editText.toString()
+            val address = binding.location.text.toString()
+            val isdone = binding.checkbox.isSelected
+            val uid = mAuth.uid.toString()
+
+            val hashMap: HashMap<String,Any> = HashMap()
+            hashMap["phone"] = phone
+            hashMap["address"] = address
+            hashMap["lat"] = 0.0
+            hashMap["lon"] = 0.0
+            hashMap["isDonate"] = isdone
+            hashMap["bg"] = bg
+            hashMap["uid"] = uid
+            hashMap["mail"] = arguments?.getString("mail").toString()
+            hashMap["name"] = arguments?.getString("name").toString()
+
+        }
+
+    }
+
+    private fun loadBloodGroup() {
+        TODO("Not yet implemented")
     }
 
 }
