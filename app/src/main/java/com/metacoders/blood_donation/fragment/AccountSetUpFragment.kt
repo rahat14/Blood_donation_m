@@ -1,6 +1,6 @@
 package com.metacoders.blood_donation.fragment
 
-import android.content.Context
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -36,7 +36,7 @@ class AccountSetUpFragment : Fragment() {
         binding.name.text = arguments?.getString("username").toString()
 
         binding.submitBtn.setOnClickListener {
-            val phone = binding.ph.editText.toString()
+            val phone = binding.ph.text.toString()
             val address = binding.location.text.toString()
             val isdone = binding.checkbox.isSelected
             val uid = mAuth.uid.toString()
@@ -51,13 +51,12 @@ class AccountSetUpFragment : Fragment() {
             hashMap["uid"] = uid
             hashMap["mail"] = arguments?.getString("mail").toString()
             hashMap["name"] = arguments?.getString("name").toString()
-
         }
 
     }
 
     private fun loadBloodGroup() {
-        TODO("Not yet implemented")
+
     }
 
 }

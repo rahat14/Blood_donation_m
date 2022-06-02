@@ -58,7 +58,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="48dp"
-                android:id="@+id/ph"
+
                 android:layout_width="match_parent"
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
@@ -68,6 +68,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+                    android:id="@+id/ph"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_baseline_local_phone_24"
                     android:textSize="16sp"
@@ -109,7 +110,6 @@
             </LinearLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="8dp"
-                android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
