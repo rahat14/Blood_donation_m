@@ -1,125 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.SignInFragment">
 
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="128dp"
-            android:layout_marginTop="50dp"
             android:layout_gravity="center"
+            android:layout_marginTop="50dp"
             android:background="@drawable/ic_logo"
             android:contentDescription="@string/app_name" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/blood_donation"
+            android:layout_gravity="center"
             android:layout_marginTop="16dp"
+            android:text="@string/app_name"
+            android:fontFamily="@font/montserrat_alternates_semibold"
+            android:textColor="@color/gray_dark"
             android:textSize="20sp"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/gray_dark"/>
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
-            android:layout_marginRight="48dp"
-            android:text="@string/you_can_donate_for_ones_in_need_and_request_blood_if_you_need"
-            android:layout_marginTop="4dp"
-            android:textSize="14sp"
             android:layout_gravity="center"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="48dp"
             android:gravity="center"
-            android:textStyle="normal"
-            android:textColor="@color/gray_light"/>
+            android:text="@string/you_can_donate_for_ones_in_need_and_request_blood_if_you_need"
+            android:textColor="@color/gray_light"
+            android:textSize="14sp"
+            android:textStyle="normal" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="48dp"
             android:id="@+id/email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
             android:layout_height="wrap_content"
-            android:hint="@string/email"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginRight="32dp"
+            android:hint="@string/email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_outline_email_24"
-                android:textSize="16sp"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/gray_light"
                 android:drawablePadding="8dp"
-                android:text="@string/dummy123_gmail_com"
-                />
+                android:inputType="textEmailAddress"
+                android:textSize="16sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="8dp"
             android:id="@+id/pass"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="32dp"
             android:hint="@string/password"
-            app:endIconMode="password_toggle"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_password_icon"
-                android:textSize="16sp"
-                android:inputType="textPassword"
-                android:textColor="@color/gray_light"
                 android:drawablePadding="8dp"
-                android:text="@string/ph"
-                />
+                android:inputType="textPassword"
+                android:textSize="16sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
             android:id="@+id/signIn"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginLeft="48dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="48dp"
-            android:layout_marginLeft="48dp"
             android:backgroundTint="@color/pink_bg"
             android:text="@string/sign_in"
+            android:textColor="@color/white"
             android:textSize="16sp"
-            app:cornerRadius="8dp"
-            android:textStyle="bold"/>
+            app:cornerRadius="8dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/or"
-            android:layout_marginTop="2dp"
-            android:textSize="20sp"
             android:layout_gravity="center"
-            android:textStyle="normal"
-            android:textColor="@color/gray_dark"/>
+            android:layout_marginTop="2dp"
+            android:text="@string/or"
+            android:textColor="@color/gray_dark"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/signUp"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginLeft="48dp"
             android:layout_marginTop="2dp"
             android:layout_marginRight="48dp"
-            android:layout_marginLeft="48dp"
             android:backgroundTint="@color/pink_bg"
             android:text="@string/sign_up"
+            android:textColor="@color/white"
             android:textSize="16sp"
-            app:cornerRadius="8dp"
-            android:textStyle="bold"/>
+            app:cornerRadius="8dp" />
     </LinearLayout>
 
 </FrameLayout>

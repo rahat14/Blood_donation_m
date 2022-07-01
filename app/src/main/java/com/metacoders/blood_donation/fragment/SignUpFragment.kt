@@ -2,6 +2,7 @@ package com.metacoders.blood_donation.fragment
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -36,10 +37,11 @@ class SignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.signUp.setOnClickListener {
-            val name = binding.username.editText.toString()
-            val email = binding.email.editText.toString()
-            val pass = binding.pass.editText.toString()
-            if (name.isNotEmpty()||email.isNotEmpty()||pass.isNotEmpty()){
+            val name = binding.username.editText?.text.toString()
+            val email = binding.email.editText?.text.toString()
+            val pass = binding.pass.editText?.text.toString()
+            if (name.isNotEmpty()&& email.isNotEmpty()&&pass.isNotEmpty()){
+                Log.d("TAG", "onViewCreated: $email")
                 RegisterUser(name, email, pass)
             }
             else Toast.makeText(ctx, "ERROR!!!", Toast.LENGTH_SHORT).show()
@@ -65,9 +67,9 @@ class SignUpFragment : Fragment() {
     private fun createUserDetails() {
 
         val bundle = bundleOf(
-            "name" to binding.username.editText.toString(),
-            "email" to binding.email.editText.toString()
+            "name" to binding.username.editText?.text.toString(),
+            "email" to binding.email.editText?.text.toString()
         )
-        findNavController().navigate(R.id.action_signUpFragment_to_accountSetUpFragment)
+        findNavController().navigate(R.id.action_signUpFragment_to_accountSetUpFragment , bundle)
     }
 }

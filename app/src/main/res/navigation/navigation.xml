@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/signInFragment">
+    app:startDestination="@id/selectLocationFragment">
 
     <fragment
         android:id="@+id/accountSetUpFragment"
@@ -27,16 +27,15 @@
         <action
             android:id="@+id/action_homeFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_blood_requestFragment"
+            app:destination="@id/blood_requestFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.metacoders.blood_donation.fragment.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_profileFragment_to_blood_requestFragment"
-            app:destination="@id/blood_requestFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.metacoders.blood_donation.fragment.SignInFragment"
@@ -48,6 +47,10 @@
         <action
             android:id="@+id/action_signInFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+
+        <action
+            android:id="@+id/action_signInFragment_to_account_setup"
+            app:destination="@id/accountSetUpFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -61,4 +64,8 @@
             android:id="@+id/action_signUpFragment_to_accountSetUpFragment"
             app:destination="@id/accountSetUpFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/selectLocationFragment"
+        android:name="com.metacoders.blood_donation.fragment.SelectLocationFragment"
+        android:label="SelectLocationFragment" />
 </navigation>

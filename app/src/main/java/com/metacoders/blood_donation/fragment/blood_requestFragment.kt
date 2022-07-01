@@ -5,56 +5,83 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Toast
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 import com.metacoders.blood_donation.R
+import com.metacoders.blood_donation.databinding.FragmentBloodRequestBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [blood_requestFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class blood_requestFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    private lateinit var binding: FragmentBloodRequestBinding
+    var bloodGroup = ""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blood_request, container, false)
+        binding = FragmentBloodRequestBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment blood_requestFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            blood_requestFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val bloods = resources.getStringArray(R.array.blood_group)
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, bloods)
+        binding.bg.adapter = adapter
+
+        binding.bg.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View, position: Int, id: Long
+            ) {
+                bloodGroup = bloods[position].toString()
             }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // write code to perform some action
+                bloodGroup = ""
+            }
+
+        }
+
+
+        binding.submitBtn.setOnClickListener {
+
+            val phn = binding.ph.text.toString()
+            val addres = binding.locationEt.text.toString()
+
+            if (phn.isEmpty() || addres.isEmpty() || bloodGroup.contains("Blood")) {
+                Toast.makeText(context, "Please Check Input Data ", Toast.LENGTH_SHORT).show()
+            } else {
+                uploadData(phn, addres)
+            }
+
+
+        }
+
+
+    }
+
+    private fun uploadData(phn: String, addres: String) {
+        val mref = FirebaseDatabase.getInstance().getReference("Blood_Req")
+        val key = mref.push().key.toString()
+        val map = HashMap<String, Any>()
+        map["userId"] = "d"
+        map["userName"] = "d"
+        map["address"] = addres
+        map["phn"] = phn
+        map["reqID"] = key
+        map["reqBlood"] = bloodGroup
+        map["time"] = System.currentTimeMillis() / 1000
+
+        mref.child(key).setValue(map).addOnCompleteListener {
+            Toast.makeText(context, "Data Requested", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener {
+            Toast.makeText(context, "Error : ${it.message}", Toast.LENGTH_LONG  ).show()
+        }
+
     }
 }

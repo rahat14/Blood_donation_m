@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Blood_donation_milon</string>
+    <string name="app_name">Safe Life</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_key">AIzaSyBwghm409l7AEhwftY796hCejSeqJgCLAY</string>
     <string name="blood_donation">Blood Donation</string>
     <string name="you_can_donate_for_ones_in_need_and_request_blood_if_you_need">You can donate for ones in need and request blood if you need.</string>
     <string name="email">Email</string>
@@ -31,6 +32,7 @@
     <string name="min_ago">min ago</string>
     <string name="chat_now">Chat Now</string>
     <string-array name="blood_group">
+        <item>Select a Blood group</item>
         <item>A+</item>
         <item>B+</item>
         <item>O+</item>

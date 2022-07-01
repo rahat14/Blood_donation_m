@@ -3,6 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Blood_donation_m/app/src/main/res/drawable/background_transparent.xml" value="0.1675" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.184" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/drawable/ic_blood.xml" value="0.2085" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/drawable/round_shape.xml" value="0.2085" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/activity_chat.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/activity_main.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/activity_splash_screen.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/chat_item_left.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/chat_item_right.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/fragment_account_set_up.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/fragment_blood_request.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/fragment_home.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/fragment_msg.xml" value="0.32135416666666666" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/fragment_profile.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/fragment_req_list.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/fragment_select_location.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/fragment_sign_in.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/fragment_sign_up.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/row_for_chat_display.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/layout/row_for_donation_post.xml" value="0.33645833333333336" />
+        <entry key="..\:/Blood_donation_m/app/src/main/res/menu/nav_menu.xml" value="0.33645833333333336" />
         <entry key="app/src/main/res/drawable-v24/ic__username_icon_pink.xml" value="0.243" />
         <entry key="app/src/main/res/drawable-v24/pink_bg_shape.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/btn_background.xml" value="0.243" />

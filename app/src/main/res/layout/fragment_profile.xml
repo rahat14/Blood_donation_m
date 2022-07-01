@@ -1,121 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.ProfileFragment">
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       >
-
-
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/round_shape"
-        android:id="@+id/h1"/>
+        android:layout_height="match_parent">
 
-       <de.hdodenhof.circleimageview.CircleImageView
-           android:id="@+id/profile_image"
-           android:layout_width="96dp"
-           android:layout_height="96dp"
-           android:layout_alignParentTop="true"
-           android:layout_centerHorizontal="true"
-           android:layout_marginTop="112dp"
-           android:src="@color/teal_200" />
 
-       <EditText
-           android:id="@+id/pro_name"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_below="@+id/profile_image"
-           android:layout_centerHorizontal="true"
-           android:layout_gravity="center"
-           android:layout_marginTop="8dp"
-           android:backgroundTint="@color/white"
-           android:text="@string/dummy123"
-           android:textColor="@color/txt_black"
-           android:textSize="20sp"
-           android:textStyle="bold" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        <ImageView
+            android:id="@+id/h1"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/round_shape" />
 
-       <EditText
-           android:id="@+id/blood_grp"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_below="@+id/pro_name"
-           android:layout_marginStart="16dp"
-           android:layout_marginTop="32dp"
-           android:layout_marginEnd="16dp"
-           android:backgroundTint="@color/white"
-           android:drawableStart="@drawable/ic_blood"
-           android:drawablePadding="16dp"
-           android:text="@string/a"
-           android:textColor="@color/txt_black"
-           android:textSize="18sp"
-           android:textStyle="normal" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="112dp"
+            android:src="@color/teal_200" />
 
-       <EditText
-           android:id="@+id/mail"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_below="@+id/blood_grp"
-           android:layout_marginStart="16dp"
-           android:layout_marginEnd="16dp"
-           android:backgroundTint="@color/white"
-           android:drawableStart="@drawable/ic_pink_email_24"
-           android:drawablePadding="16dp"
-           android:text="@string/dummy123_gmail_com"
-           android:textColor="@color/txt_black"
-           android:textSize="18sp"
-           android:textStyle="normal" />
+        <EditText
+            android:id="@+id/pro_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_image"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/dummy123"
+            android:textColor="@color/txt_black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-       <EditText
-           android:id="@+id/phone"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_below="@+id/mail"
-           android:layout_marginStart="16dp"
-           android:layout_marginEnd="16dp"
-           android:backgroundTint="@color/white"
-           android:drawableStart="@drawable/ic_baseline_local_phone_24"
-           android:drawablePadding="16dp"
-           android:text="@string/ph"
-           android:textColor="@color/txt_black"
-           android:textSize="18sp"
-           android:textStyle="normal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-       <EditText
-           android:id="@+id/address"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_below="@+id/phone"
-           android:layout_marginStart="16dp"
-           android:layout_marginEnd="16dp"
-           android:backgroundTint="@color/white"
-           android:drawableStart="@drawable/ic_outline_location_on_24"
-           android:drawablePadding="16dp"
-           android:inputType="textMultiLine"
-           android:minLines="2"
-           android:text="@string/location"
-           android:textColor="@color/txt_black"
-           android:textSize="18sp"
-           android:textStyle="normal" />
+        <EditText
+            android:id="@+id/blood_grp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pro_name"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_blood"
+            android:drawablePadding="16dp"
+            android:text="@string/a"
+            android:textColor="@color/txt_black"
+            android:textSize="18sp"
+            android:textStyle="normal" />
 
-   </RelativeLayout>
+        <EditText
+            android:id="@+id/mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blood_grp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_pink_email_24"
+            android:drawablePadding="16dp"
+            android:text="@string/dummy123_gmail_com"
+            android:textColor="@color/txt_black"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mail"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_baseline_local_phone_24"
+            android:drawablePadding="16dp"
+            android:text="@string/ph"
+            android:textColor="@color/txt_black"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_outline_location_on_24"
+            android:drawablePadding="16dp"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:text="@string/location"
+            android:textColor="@color/txt_black"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <CheckBox
+            android:id="@+id/isChecked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text=" Available For Blood Donation" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/isChecked"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_baseline_logout_24"
+            android:drawablePadding="16dp"
+            android:text="Log Out"
+            android:textColor="@color/txt_black"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+
+    </RelativeLayout>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="56dp"
-        android:layout_margin="16dp"
-        app:backgroundTint="@color/pink_bg"
-        android:src="@drawable/edit"
-        android:layout_gravity="bottom|end"
         android:layout_height="56dp"
-        android:contentDescription="@string/button" />
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/button"
+        android:src="@drawable/edit"
+        android:visibility="gone"
+        app:backgroundTint="@color/pink_bg" />
 </FrameLayout>

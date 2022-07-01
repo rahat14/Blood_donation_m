@@ -1,123 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.card.MaterialCardView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:cardElevation="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:cardCornerRadius="8dp"
-        app:cardBackgroundColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent">
-       <RelativeLayout
-           android:layout_margin="16dp"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           >
-           <TextView
-               android:id="@+id/text1"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textColor="@color/gray_light"
-               android:textSize="20sp"
-               android:textStyle="bold"
-               android:text="@string/name"
-               />
-           <TextView
-               android:id="@+id/name"
-               android:layout_below="@+id/text1"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textColor="@color/txt_black"
-               android:textSize="20sp"
-               android:textStyle="normal"
-               android:text="@string/dummy123"
-               />
-           <TextView
-               android:id="@+id/text2"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_below="@+id/name"
-               android:layout_marginTop="8dp"
-               android:textColor="@color/gray_light"
-               android:textSize="20sp"
-               android:textStyle="bold"
-               android:text="@string/location_l"
-               />
-           <TextView
-               android:id="@+id/location"
-               android:layout_below="@+id/text2"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textColor="@color/txt_black"
-               android:textSize="20sp"
-               android:textStyle="normal"
-               android:text="@string/location"
-               />
-           <TextView
-               android:id="@+id/time_counter"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_below="@+id/location"
-               android:layout_marginTop="12dp"
-               android:textColor="@color/gray_light"
-               android:textSize="20sp"
-               android:textStyle="bold"
-               android:text="@string/num_5"
-               />
-           <TextView
-               android:id="@+id/text3"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_toEndOf="@+id/time_counter"
-               android:layout_below="@+id/location"
-               android:layout_marginStart="8dp"
-               android:layout_marginTop="12dp"
-               android:textColor="@color/gray_light"
-               android:textSize="20sp"
-               android:textStyle="bold"
-               android:text="@string/min_ago"
-               />
-           <TextView
-           android:id="@+id/chat"
-            android:layout_alignParentRight="true"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_below="@+id/location"
-           android:layout_marginStart="8dp"
-           android:layout_marginTop="12dp"
-           android:textColor="@color/pink_bg"
-           android:textSize="20sp"
-           android:textStyle="bold"
-           android:text="@string/chat_now"
-           />
-           <FrameLayout
-               android:layout_alignParentRight="true"
-               android:layout_width="48dp"
-               android:layout_marginTop="16dp"
-               android:layout_height="64dp">
-               <ImageView
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:background="@drawable/ic_blood_group_dfw"/>
-               <TextView
-                   android:id="@+id/blood_grp"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:backgroundTint="@color/white"
-                   android:text="@string/a"
-                   android:textColor="@color/white"
-                   android:textSize="20sp"
-                   android:layout_gravity="center"
-                   android:gravity="center"
-                   android:textStyle="bold" />
-           </FrameLayout>
-       </RelativeLayout>
+        android:layout_margin="8dp">
 
-    </com.google.android.material.card.MaterialCardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textColor="@color/gray_light"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text1"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/bloodContainer"
+            android:text="@string/dummy123"
+            android:textColor="@color/txt_black"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/phoneTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="4dp"
+            android:text="Phone"
+            android:textColor="@color/gray_light"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ph"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneTV"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/bloodContainer"
+            android:autoLink="phone"
+            android:text="000000000"
+            android:textColor="@color/txt_black"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ph"
+            android:layout_marginTop="4dp"
+            android:text="@string/location_l"
+            android:textColor="@color/gray_light"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text2"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/bloodContainer"
+            android:text="@string/location"
+            android:textColor="@color/txt_black"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp"
+            android:text="@string/min_ago"
+            android:textColor="@color/gray_light"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/chat_now"
+            android:textColor="@color/pink_bg"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/bloodContainer"
+            android:layout_width="48dp"
+            android:layout_height="64dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/blood"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_blood_group_dfw" />
+
+            <TextView
+                android:id="@+id/blood_grp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="@string/a"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

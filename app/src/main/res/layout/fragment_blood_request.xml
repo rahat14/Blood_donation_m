@@ -10,7 +10,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_marginBottom="20dp"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:text="@string/name"
+            android:text="Contact Info"
             android:layout_marginStart="32dp"
             android:textColor="@color/gray_dark"
             android:textSize="16sp"
@@ -44,6 +44,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ph"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_baseline_local_phone_24"
@@ -68,6 +69,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/gray_dark"/>
             <Spinner
+                android:id="@+id/bg"
                 android:layout_height="48dp"
                 android:layout_width="match_parent"
                 android:layout_marginStart="32dp"
@@ -83,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:text="@string/name"
+            android:text="Address"
             android:layout_marginStart="32dp"
             android:textColor="@color/gray_dark"
             android:textSize="16sp"
@@ -99,6 +101,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/locationEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_outline_location_on_24"
@@ -112,6 +115,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitBtn"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="32dp"
@@ -119,6 +123,7 @@
             android:layout_marginStart="56dp"
             android:backgroundTint="@color/pink_bg"
             android:text="Submit"
+            android:textColor="@color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
             app:cornerRadius="8dp"
