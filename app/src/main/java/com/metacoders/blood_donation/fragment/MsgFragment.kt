@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -50,6 +51,10 @@ class MsgFragment : Fragment() {
         llm.reverseLayout = true
         llm.stackFromEnd = true
         binding.list.layoutManager = llm
+
+        binding.searchBar.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_usersFragment)
+        }
 
     }
 
@@ -158,6 +163,8 @@ class MsgFragment : Fragment() {
         binding.list.layoutManager = llm
         firebaseRecyclerAdapter?.startListening()
         binding.list.adapter = firebaseRecyclerAdapter
+
+
     }
 
     override fun onResume() {

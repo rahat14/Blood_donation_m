@@ -42,6 +42,7 @@ class SignInFragment : Fragment() {
 
         val user = FirebaseAuth.getInstance().currentUser
         if(user != null){
+
             findNavController().navigate(R.id.action_signInFragment_to_homeFragment)
         }
 

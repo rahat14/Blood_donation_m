@@ -39,11 +39,13 @@ class SelectLocationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        Dexter.withContext(requireContext())
+        Dexter
+            .withContext(requireContext())
             .withPermissions(
                 Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.ACCESS_FINE_LOCATION
-            ).withListener(object : MultiplePermissionsListener {
+            )
+            .withListener(object : MultiplePermissionsListener {
                 override fun onPermissionsChecked(report: MultiplePermissionsReport) {
                 }
 
@@ -52,8 +54,10 @@ class SelectLocationFragment : Fragment() {
                     token: PermissionToken?
                 ) {
                 }
-            }).check()
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
+            })
+            .check()
+        fusedLocationClient = LocationServices
+            .getFusedLocationProviderClient(requireActivity())
         locationRequest = LocationRequest.create()
         locationRequest.interval = 50000
         locationRequest.fastestInterval = 20000

@@ -27,7 +27,7 @@ class ReqListFragment : Fragment(), ReqAdapter.Interaction {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentReqListBinding.inflate(layoutInflater, container, false)
         mAdapter = ReqAdapter(this)
@@ -80,10 +80,10 @@ class ReqListFragment : Fragment(), ReqAdapter.Interaction {
 
     }
 
-    private fun GotoChatPage(key: String) {
+    private fun GotoChatPage(key: String, uid: String) {
         val intent = Intent(context, ChatActivity::class.java)
         intent.putExtra("chatID", key)
-        intent.putExtra("otherUserID", userId)
+        intent.putExtra("otherUserID", uid)
         startActivity(intent)
     }
 
@@ -95,14 +95,14 @@ class ReqListFragment : Fragment(), ReqAdapter.Interaction {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     // found the data
-                    GotoChatPage(userId + uid)
+                    GotoChatPage(userId + uid , uid )
                 } else {
                     ref.child(uid + userId)
                         .addListenerForSingleValueEvent(object : ValueEventListener {
                             override fun onDataChange(snapshot: DataSnapshot) {
                                 if (snapshot.exists()) {
                                     // found the chat
-                                    GotoChatPage(uid + userId)
+                                    GotoChatPage(uid + userId, uid)
                                 } else {
                                     // no chat have to create
                                     createChat(uid + userId, uid)
@@ -129,7 +129,7 @@ class ReqListFragment : Fragment(), ReqAdapter.Interaction {
         val ref = FirebaseDatabase.getInstance().getReference("ChatHistory")
         ref.child(key).setValue(historyModel).addOnCompleteListener { task: Task<Void?> ->
             if (task.isSuccessful) {
-                GotoChatPage(key)
+                GotoChatPage(key, uid)
             }
         }
     }

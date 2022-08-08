@@ -79,7 +79,6 @@
             android:layout_below="@+id/text2"
             android:layout_alignParentStart="true"
             android:layout_toStartOf="@+id/bloodContainer"
-            android:text="@string/location"
             android:textColor="@color/txt_black"
             android:textSize="17sp"
             android:textStyle="normal" />
@@ -107,7 +106,20 @@
             android:layout_marginTop="12dp"
             android:text="@string/chat_now"
             android:textColor="@color/pink_bg"
-            android:textSize="18sp"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/checkLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/chat"
+            android:text="Open Map"
+            android:textColor="@color/pink_bg"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <FrameLayout

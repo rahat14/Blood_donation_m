@@ -1,14 +1,18 @@
 package com.metacoders.blood_donation
 
-import androidx.recyclerview.widget.RecyclerView
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 import com.metacoders.blood_donation.databinding.RowForDonationPostBinding
 import com.metacoders.blood_donation.model.BloodReq
 import java.util.*
+
 
 class ReqAdapter(private val interaction: Interaction? = null) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -71,11 +75,19 @@ class ReqAdapter(private val interaction: Interaction? = null) :
             binding.ph.text  = item.phn
             binding.name.text = item.userName
             binding.bloodGrp.text= item.reqBlood.toString()
+            binding.location.text = item.address
             binding.text3.text = ConvertTime.getTimeAgo(
                 Date(
                     item.time * 1000
                 )
             )
+
+            binding.checkLocation.setOnClickListener {
+                val uri =
+                    "http://maps.google.com/maps?daddr=" + item.lat.toString() + "," + item.lon.toString()
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
+                binding.root.context.startActivity(intent)
+            }
 
 
         }

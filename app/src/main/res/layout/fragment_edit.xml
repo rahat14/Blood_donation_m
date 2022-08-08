@@ -35,7 +35,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:enabled="false"
+            android:visibility="gone"
             android:backgroundTint="@color/white"
             android:text="@string/dummy123"
             android:textColor="@color/txt_black"
@@ -57,41 +57,38 @@
             android:backgroundTint="@color/white"
             android:drawableStart="@drawable/ic_blood"
             android:drawablePadding="16dp"
-            android:enabled="false"
             android:text="@string/a"
+            android:visibility="gone"
             android:textColor="@color/txt_black"
             android:textSize="18sp"
             android:textStyle="normal" />
 
         <EditText
-            android:id="@+id/mail"
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/blood_grp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:enabled="false"
             android:backgroundTint="@color/white"
-            android:drawableStart="@drawable/ic_pink_email_24"
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="16dp"
-            android:text="@string/dummy123_gmail_com"
             android:textColor="@color/txt_black"
             android:textSize="18sp"
             android:textStyle="normal" />
+
 
         <EditText
             android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/mail"
+            android:layout_below="@+id/name"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="@color/white"
             android:drawableStart="@drawable/ic_baseline_local_phone_24"
             android:drawablePadding="16dp"
-            android:enabled="false"
-
-            android:text="@string/ph"
             android:textColor="@color/txt_black"
             android:textSize="18sp"
             android:textStyle="normal" />
@@ -106,35 +103,8 @@
             android:backgroundTint="@color/white"
             android:drawableStart="@drawable/ic_outline_location_on_24"
             android:drawablePadding="16dp"
-            android:enabled="false"
             android:inputType="textMultiLine"
             android:minLines="2"
-
-            android:text="@string/location"
-            android:textColor="@color/txt_black"
-            android:textSize="18sp"
-            android:textStyle="normal" />
-
-        <CheckBox
-            android:id="@+id/isChecked"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/address"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:text=" Available For Blood Donation" />
-
-        <TextView
-            android:id="@+id/logout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/isChecked"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/white"
-            android:drawableStart="@drawable/ic_baseline_logout_24"
-            android:drawablePadding="16dp"
-            android:text="Log Out"
             android:textColor="@color/txt_black"
             android:textSize="18sp"
             android:textStyle="normal" />
@@ -143,13 +113,14 @@
     </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/editIcon"
+        android:id="@+id/save_icon"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="85dp"
         android:contentDescription="@string/button"
-        android:src="@drawable/edit"
+        android:src="@drawable/ic_baseline_save_24"
         android:tint="@color/white"
         app:tint="#FFFF"
         android:visibility="visible"

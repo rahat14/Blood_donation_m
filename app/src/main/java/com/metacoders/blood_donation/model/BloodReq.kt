@@ -7,5 +7,7 @@ data class BloodReq(
     val reqID : String? = "",
     val reqBlood : String? = "",
     val time : Long = 0,
-    val userName : String? = ""
+    val userName : String? = "",
+    val lat: Double? = 0.00,
+    val lon: Double? = 0.00
 )

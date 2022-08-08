@@ -1,6 +1,6 @@
 package com.metacoders.blood_donation.fragment
 
-import android.R
+
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -17,6 +17,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.metacoders.blood_donation.R
 
 import com.metacoders.blood_donation.databinding.FragmentProfileBinding
 import com.metacoders.blood_donation.model.Users
@@ -60,10 +61,14 @@ class ProfileFragment : Fragment() {
             }catch (e : Exception){
 
             }finally {
-                val navOptions: NavOptions = NavOptions.Builder().setPopUpTo(com.metacoders.blood_donation.R.id.signInFragment, true).build()
-                findNavController().navigate(com.metacoders.blood_donation.R.id.signInFragment , null , navOptions)
+                val navOptions: NavOptions = NavOptions.Builder().setPopUpTo(R.id.signInFragment, true).build()
+                findNavController().navigate(R.id.signInFragment , null , navOptions)
 
             }
+        }
+
+        binding.editIcon.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_editFragment)
         }
 
     }
